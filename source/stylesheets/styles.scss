@@ -1,28 +1,52 @@
-/* ---------------------------------------------------------
-   HTML5 Bones
-   This stylesheet contains print styling and a section for 
-   you to simply add your own. This is a basic template 
-   after all.
-   ---------------------------------------------------------*/
-    body {
-   
-    }
-    /* Default link styling */
-    a:link { color:#0271fb; }
-    a:visited { color:#bd02fb; }
-    a:hover, a:focus { color:#000; }
-    a:active { color:#fb0e02; }
-    
-    
-    
-/* ---------------------------------------------------------
-   Author's styles
-   ---------------------------------------------------------*/
-    body {
-   
-    }
+body {
+  font-family: "freight-sans-pro",sans-serif;
+  font-weight: 400;
+}
 
+header#banner {
+  height: 100vh;
+  min-height: 650px;
+  max-height: 1100px;
+  padding: 0px;
+  overflow: hidden;
+  -webkit-background-clip: border-box;
+  -webkit-background-origin: padding-box;
+  -webkit-background-size: cover;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: #edf4f5;
+  background-image: url(image-path('header_bg.png'));
+  background-origin: padding-box;
+  background-position: 50% 55%;
+  background-size: cover;
+  color: #153c4b;
+}
 
+nav#top {
+  margin: 32px auto 0 auto;
+  text-align: center;
+}
+
+nav#top a {
+  margin: 0 24px;
+  font-weight: 600;
+  color: #153c4b;
+  text-decoration: none;
+  font-size: 16pt;
+
+}
+
+#topnav-bulb {
+  width: 32px;
+  height: 54px;
+  display: inline-block;
+  margin: 0 16px;
+  vertical-align: middle;
+  margin-top: -8px;
+  background-image: url(image-path('topnav_bulb.png'));
+  background-size: 32px;
+
+}
     
 /* ---------------------------------------------------------
    Print styles
