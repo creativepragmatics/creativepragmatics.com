@@ -1,11 +1,19 @@
+@import "compass";
+
+$content-width: 550px;
+
 body {
   font-family: "freight-sans-pro",sans-serif;
   font-weight: 400;
 }
 
+.content {
+  width: $content-width;
+  margin: 0 auto;
+}
+
 header#banner {
-  height: 100vh;
-  min-height: 650px;
+  min-height: 600px;
   max-height: 1100px;
   padding: 0px;
   overflow: hidden;
@@ -20,21 +28,40 @@ header#banner {
   background-position: 50% 55%;
   background-size: cover;
   color: #153c4b;
+
+  .content {
+    margin-bottom: 64px;
+
+    h1 {
+      margin-top: 58px;
+      font-size: 48pt;
+      font-weight: 700;
+      line-height: 58pt;
+    }
+
+    h2 {
+      font-size: 20pt;
+      font-weight: 400;
+    }
+  }
+
 }
 
 nav#top {
   margin: 32px auto 0 auto;
   text-align: center;
+
+  a {
+    margin: 0 24px;
+    font-weight: 600;
+    color: #153c4b;
+    text-decoration: none;
+    font-size: 16pt;
+    cursor: pointer;
+
+  }
 }
 
-nav#top a {
-  margin: 0 24px;
-  font-weight: 600;
-  color: #153c4b;
-  text-decoration: none;
-  font-size: 16pt;
-
-}
 
 #topnav-bulb {
   width: 32px;
@@ -45,8 +72,56 @@ nav#top a {
   margin-top: -8px;
   background-image: url(image-path('topnav_bulb.png'));
   background-size: 32px;
-
 }
+
+#red-section-inverse-triangle {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+section#red-section {
+  height: 500px;
+  background-color: rgb(250,59,86); // Old browsers
+  @include filter-gradient(#fa3b56, #fb4a49, vertical); // IE6-9
+  @include background-image(linear-gradient(top, rgba(250,59,86,1) 0%,rgba(251,74,73,1) 100%));
+  overflow: hidden;
+
+  .content {
+    margin-top: 64px;
+    width: $content-width;
+    color: white;
+    font-size: 19.5pt;
+
+    a {
+      text-decoration: underline;
+      font-weight: 700;
+      color: white;
+    }
+  }
+
+  #clients {
+    width: 900px;
+    margin: 0 auto;
+
+    #client-pspdfkit {
+      display: inline-block;
+      width: 128px;
+      height: 128px;
+      background-image: url(image-path('pspdfkit.png'));
+      background-size: 128px;
+    }
+
+    #client-mindnode {
+      display: inline-block;
+      width: 128px;
+      height: 128px;
+      background-image: url(image-path('mindnode.png'));
+      background-size: 128px;
+    }
+  }
+}
+
     
 /* ---------------------------------------------------------
    Print styles
